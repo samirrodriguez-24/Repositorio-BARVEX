@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio de sesión - BARVEX</title>
+    <!-- Asegúrate de poner el nombre exacto de tu archivo CSS aquí -->
+    <link rel="stylesheet" href="Css/Estilos.css">
+</head>
+<body>
+
+    <div class="login-container">
+        
+        <!-- Lado izquierdo: Imagen de fondo y eslogan -->
+        <div class="login-left">
+            <div class="overlay-content">
+                <h2>El estilo que mereces.</h2>
+                <p>Más de 12,000 clientes ya reservan con BARVEX.</p>
+            </div>
+        </div>
+
+        <!-- Lado derecho: Tu formulario -->
+        <div class="login-right">
+            <div class="form-wrapper">
+                
+                <header>
+                    <nav class="navbar">
+                        <a href="index.html" class="logo">BAR<span>VEX</span></a>
+                    </nav>
+                </header>
+            
+                <h1>Bienvenido</h1>
+                <p class="subtitle">Ingresa a tu cuenta para continuar.</p>
+
+                <!-- Formulario de inicio de sesión -->
+                <form action="procesar_login.php" method="POST">
+                
+                    <label for="usuario">CORREO ELECTRÓNICO O USUARIO</label>
+                    <input type="text" id="usuario" name="usuario" placeholder="tu@email.com" required>
+                    
+                    <label for="contrasena">CONTRASEÑA</label>
+                    <input type="password" id="contrasena" name="contrasena" placeholder="•••••••" required>
+                    
+                    <div class="form-options">
+                        <div class="checkbox-group">
+                            <input type="checkbox" id="recuerdame" name="recuerdame">
+                            <label for="recuerdame">Recordarme</label>
+                        </div>
+                        <a href="recuperar_contrasena.html" class="forgot-link">¿Olvidaste tu contraseña?</a>
+                    </div>
+
+                    <button type="submit" class="btn-submit">Iniciar sesión</button>
+
+                  
+
+                    <p class="register-text">¿No tienes una cuenta? <a href="registro.html">Crear cuenta</a></p>
+                
+                </form>
+
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>

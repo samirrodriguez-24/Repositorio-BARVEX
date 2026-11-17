@@ -1,0 +1,761 @@
+/* =================================
+   CONFIGURACIÓN GENERAL
+================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #0D0D0D;
+    color: #F5F0DF;
+    font-family: 'DM Sans', sans-serif;
+}
+
+
+/* =================================
+   NAVBAR
+================================= */
+
+.header {
+    width: 100%;
+    height: 77px;
+    background-color: #0D0D0D;
+    border-bottom: 1px solid #222;
+}
+
+.navbar {
+    height: 100%;
+    padding: 0 4.2%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* LOGO */
+
+.logo {
+    color: #F5F0DF;
+    font-family: 'Playfair Display', serif;
+    font-size: 25px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-decoration: none;
+}
+
+.logo span {
+    color: #C9A646;
+}
+
+/* NAVEGACIÓN */
+
+.nav-links {
+    display: flex;
+    gap: 40px;
+    list-style: none;
+}
+
+.nav-links a,
+.login {
+    color: #B0B0B0;
+    font-size: 16px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.nav-links a:hover,
+.login:hover {
+    color: #C9A646;
+}
+
+/* BOTONES NAVBAR */
+
+.nav-buttons {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.login {
+    color: #BDBDBD;
+    font-weight: 600;
+}
+
+.btn-gold {
+    background-color: #C9A646;
+    color: #080808;
+    padding: 12px 18px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.btn-gold:hover {
+    background-color: #E0BD5E;
+    color: #080808;
+}
+
+
+/* =================================
+   HERO / PORTADA
+================================= */
+
+.hero {
+    min-height: 605px;
+    width: 100%;
+
+    background-image:
+        linear-gradient(
+            90deg,
+            rgba(10, 10, 10, 0.96) 0%,
+            rgba(10, 10, 10, 0.83) 45%,
+            rgba(10, 10, 10, 0.45) 100%
+        ),
+        linear-gradient(
+            0deg,
+            rgba(10, 10, 10, 0.75),
+            transparent
+        ),
+        url("../Imagenes/hero-barberia.jpg");
+
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    display: flex;
+    align-items: center;
+    padding: 60px 8.4%;
+}
+
+.hero-content {
+    max-width: 750px;
+}
+
+/* ETIQUETA */
+
+.hero-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+
+    background-color: rgba(201, 166, 70, 0.10);
+    border: 1px solid rgba(201, 166, 70, 0.3);
+
+    border-radius: 30px;
+    padding: 9px 20px;
+
+    color: #D6AE43;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+
+    margin-bottom: 22px;
+}
+
+.hero-tag span {
+    width: 8px;
+    height: 8px;
+    background-color: #C9A646;
+    border-radius: 50%;
+}
+
+/* TÍTULO */
+
+.hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(55px, 6vw, 88px);
+    line-height: 1.12;
+    font-weight: 800;
+    color: #F5F0DF;
+    margin-bottom: 30px;
+}
+
+.hero h1 span {
+    color: #C9A646;
+}
+
+/* DESCRIPCIÓN */
+
+.hero p {
+    max-width: 730px;
+    color: #BDBDBD;
+    font-size: 21px;
+    line-height: 1.8;
+    margin-bottom: 48px;
+}
+
+/* BOTONES HERO */
+
+.hero-buttons {
+    display: flex;
+    gap: 20px;
+}
+
+.btn-large {
+    padding: 20px 35px;
+    font-size: 18px;
+    border-radius: 5px;
+}
+
+/* BOTÓN SECUNDARIO */
+
+.btn-dark {
+    background-color: #202020;
+    border: 1px solid #383838;
+    color: #F5F0DF;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.btn-dark:hover {
+    background-color: #303030;
+    border-color: #C9A646;
+    color: #C9A646;
+}
+
+
+/* =================================
+   SECCIÓN BARBERÍAS
+================================= */
+
+.barberias {
+    padding: 70px 4.2%;
+    background-color: #0D0D0D;
+}
+
+/* ENCABEZADO */
+
+.section-header {
+    margin-bottom: 48px;
+}
+
+.section-tag {
+    color: #C9A646;
+    font-size: 15px;
+    letter-spacing: 2px;
+    font-weight: 500;
+}
+
+.section-header h2 {
+    font-family: 'Playfair Display', serif;
+    color: #F5F0DF;
+    font-size: 44px;
+    margin-top: 8px;
+}
+
+/* CONTENEDOR DE TARJETAS */
+
+.barberias-container {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 25px;
+}
+
+/* TARJETAS */
+
+.barberia-card {
+    display: flex;
+    min-height: 225px;
+
+    background-color: #171717;
+    border: 1px solid #292929;
+    border-radius: 11px;
+
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.barberia-card:hover {
+    border-color: #A88B42;
+    transform: translateY(-4px);
+}
+
+/* IMAGEN */
+
+.barberia-img {
+    width: 180px;
+    min-width: 180px;
+    object-fit: cover;
+}
+
+/* INFORMACIÓN */
+
+.barberia-info {
+    padding: 25px;
+}
+
+.barberia-info h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 23px;
+    color: #F5F0DF;
+    margin-bottom: 9px;
+}
+
+.barberia-info p {
+    color: #858585;
+    font-size: 14px;
+    margin-bottom: 13px;
+}
+
+.barberia-info .rating {
+    color: #C9A646;
+    font-size: 18px;
+    letter-spacing: -1px;
+}
+
+.rating span {
+    color: #BDBDBD;
+    letter-spacing: 0;
+    font-size: 15px;
+}
+
+.services {
+    display: flex;
+    gap: 7px;
+    flex-wrap: wrap;
+}
+
+.services span {
+    color: #898989;
+    background-color: #202020;
+    border: 1px solid #303030;
+    border-radius: 20px;
+    padding: 4px 12px;
+    font-size: 13px;
+}
+
+
+/* =================================
+   BOTÓN VER TODAS
+================================= */
+
+.all-barberias {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.btn-outline {
+    border: 1px solid #C9A646;
+    color: #C9A646;
+    padding: 15px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.btn-outline:hover {
+    background-color: #C9A646;
+    color: #0D0D0D;
+}
+
+
+/* =================================
+   FOOTER
+================================= */
+
+.footer {
+    width: 100%;
+    background-color: #0D0D0D;
+    padding: 52px 5.4% 0;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 45px;
+}
+
+.footer-brand h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 30px;
+    color: #F5F0DF;
+    margin-bottom: 7px;
+}
+
+.footer-brand h2 span {
+    color: #C9A646;
+}
+
+.footer-brand p {
+    color: #858585;
+    font-size: 14px;
+}
+
+.footer-links {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    column-gap: 45px;
+    row-gap: 30px;
+}
+
+.footer-links a {
+    color: #858585;
+    text-decoration: none;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+.footer-links a:hover {
+    color: #C9A646;
+}
+
+.footer-bottom {
+    width: 100%;
+    height: 1px;
+    background-color: #222;
+}
+
+
+/* =================================
+   DISEÑO RESPONSIVE
+================================= */
+
+@media (max-width: 900px) {
+
+    .barberias-container {
+        grid-template-columns: 1fr;
+    }
+
+    .hero {
+        padding: 60px 5%;
+    }
+
+    .hero p {
+        font-size: 18px;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    /* NAVBAR */
+
+    .navbar {
+        padding: 0 5%;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .nav-buttons {
+        gap: 12px;
+    }
+
+    .login {
+        font-size: 13px;
+    }
+
+    .nav-buttons .btn-gold {
+        padding: 10px;
+        font-size: 12px;
+    }
+
+    /* HERO */
+
+    .hero {
+        min-height: 570px;
+        padding: 50px 6%;
+    }
+
+    .hero h1 {
+        font-size: 52px;
+    }
+
+    .hero p {
+        font-size: 16px;
+        line-height: 1.7;
+    }
+
+    .hero-tag {
+        font-size: 10px;
+        padding: 9px 12px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .btn-large {
+        padding: 15px 22px;
+        font-size: 15px;
+    }
+
+    /* BARBERÍAS */
+
+    .barberias {
+        padding: 50px 5%;
+    }
+
+    .section-header h2 {
+        font-size: 34px;
+    }
+
+    .barberia-card {
+        flex-direction: column;
+    }
+
+    .barberia-img {
+        width: 100%;
+        height: 190px;
+    }
+
+    .barberia-info {
+        padding: 20px;
+    }
+
+    /* FOOTER */
+
+    .footer {
+        padding: 40px 6% 0;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 30px;
+    }
+
+    .footer-links {
+        width: 100%;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+}
+
+
+<!-- Inicio de sesión --
+
+
+
+** {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body, html {
+    width: 100%;
+    height: 100vh;
+    background-color: #0b0b0b;
+    color: #ffffff;
+}
+
+.login-container {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+}
+
+/* --- COLUMNA IZQUIERDA (IMAGEN) --- */
+.login-left {
+    flex: 1.1;
+    /* Cambia 'fondo-barberia.jpg' por la ruta real de tu imagen */
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.2), #0d0d0d), 
+                linear-gradient(to top, rgba(0, 0, 0, 0.9) 10%, transparent 50%), 
+                url('fondo-barberia.jpg') center/cover no-repeat;
+    display: flex;
+    align-items: flex-end;
+    padding: 60px;
+}
+
+.overlay-content h2 {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 2.8rem;
+    line-height: 1.15;
+    margin-bottom: 12px;
+    color: #f5f5f5;
+}
+
+.overlay-content p {
+    font-size: 0.9rem;
+    color: #9e9e9e;
+}
+
+/* --- COLUMNA DERECHA (FORMULARIO) --- */
+.login-right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0d0d0d;
+    padding: 40px;
+}
+
+.form-wrapper {
+    width: 100%;
+    max-width: 380px;
+}
+
+/* Logo BARVEX */
+.navbar {
+    margin-bottom: 30px;
+}
+
+.logo {
+    text-decoration: none;
+    font-family: Georgia, serif;
+    font-size: 1rem;
+    font-weight: bold;
+    letter-spacing: 3px;
+    color: #d4af37;
+}
+
+.logo span {
+    color: #e5c158;
+}
+
+/* Títulos */
+.form-wrapper h1 {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 2.1rem;
+    margin-bottom: 8px;
+    color: #ffffff;
+}
+
+.subtitle {
+    color: #777777;
+    font-size: 0.9rem;
+    margin-bottom: 30px;
+}
+
+/* Inputs y Etiquetas */
+form > label {
+    display: block;
+    font-size: 0.7rem;
+    letter-spacing: 1px;
+    color: #a0a0a0;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+form input[type="text"],
+form input[type="password"] {
+    width: 100%;
+    padding: 12px 14px;
+    background-color: #161616;
+    border: 1px solid #262626;
+    border-radius: 5px;
+    color: #ffffff;
+    margin-bottom: 20px;
+    font-size: 0.9rem;
+}
+
+form input:focus {
+    outline: none;
+    border-color: #d4af37;
+}
+
+/* Recordarme y Olvidaste contraseña */
+.form-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.8rem;
+    margin-bottom: 25px;
+}
+
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #cccccc;
+}
+
+.checkbox-group label {
+    cursor: pointer;
+}
+
+.forgot-link, .register-text a {
+    color: #d4af37;
+    text-decoration: none;
+}
+
+.forgot-link:hover, .register-text a:hover {
+    text-decoration: underline;
+}
+
+/* Botón Principal Dorado */
+.btn-submit {
+    width: 100%;
+    padding: 12px;
+    background-color: #dfba52;
+    border: none;
+    border-radius: 5px;
+    color: #111111;
+    font-weight: 700;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.btn-submit:hover {
+    background-color: #c9a43e;
+}
+
+/* Acceso rápido de demostración */
+.demo-access {
+    margin-top: 30px;
+    border-top: 1px solid #1f1f1f;
+    padding-top: 18px;
+    text-align: center;
+}
+
+.demo-text {
+    font-size: 0.75rem;
+    color: #666666;
+    display: block;
+    margin-bottom: 14px;
+}
+
+.demo-buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.demo-buttons button {
+    background-color: #141414;
+    border: 1px solid #242424;
+    color: #aaaaaa;
+    padding: 8px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.demo-buttons button:hover {
+    border-color: #d4af37;
+    color: #ffffff;
+}
+
+/* Enlace de registro inferior */
+.register-text {
+    text-align: center;
+    font-size: 0.82rem;
+    color: #777777;
+    margin-top: 25px;
+}
+
+/* Adaptación para celulares */
+@media (max-width: 768px) {
+    .login-left {
+        display: none;
+    }
+}
